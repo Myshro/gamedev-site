@@ -117,7 +117,6 @@
         text-align: center;
         background-color: var(--dark);
         padding: 250px 0 250px 0;
-        width: 100vw;
     }
     
     .hero-text {
