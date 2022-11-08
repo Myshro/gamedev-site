@@ -9,7 +9,7 @@
     </div>
     <div class="hrefs">
         <a class="members" href="/members">Members</a>
-        <a class="socials" href="/socials">Socials</a>
+        <a class="socials" href="https://www.instagram.com/ohsgamedev/?hl=en">Socials</a>
     </div>
 </div>
 
@@ -43,7 +43,9 @@
         margin-left: 40px;
     }
 
-    .hrefs 
+    .hrefs {
+        margin-left: 30px;
+    }
     a:link { text-decoration: none; }
     a:visited { text-decoration: none; }
     a:hover { text-decoration: none; }
@@ -56,9 +58,9 @@
         justify-content: space-around;
         align-items: center;
         padding: 20px 10vw;
-        min-width: 600px;
+        /* min-width: 600px; */
         font-size: 1em;
-        width: 100%;
+        width: 80%;
         background-color: transparent;
         top: 0;
         z-index: 10;
@@ -75,5 +77,41 @@
         font-size: 2.5rem;
         margin-left: 20px;
         text-decoration: none;
+    }
+
+    @media screen and (max-width: 880px) {
+        .title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo img {
+            display: none;
+        }
+
+        .hrefs {
+            margin-top: 30px;
+            margin-left: 0;
+        }
+
+        .title {
+            padding: 20px 0;
+        }
+        .title a {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo img {
+            display: none;
+        }
+
+
     }
 </style>

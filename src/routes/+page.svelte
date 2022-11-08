@@ -2,21 +2,18 @@
 </script> 
 
 <section class="hero">
-    
-    
     <img id="unity" src="./unitycrop.png" alt="Unity logo">
-    <div class="hero-text rotating">
+    <div class="hero-text">
         <h1>Oakton's only <span class="grad">gamedev</span> club</h1>
         <h3>Come join us in making things!</h3>
         <div class="jump-buttons">
-            <button>About</button>
-            <button>Tech</button>
-            <button>Games</button>
+            <a class="abt" href="#about">About</a>
+            <a class="tec" href="#technology">Tech</a>
+            <!-- <a>Games</a> -->
         </div>
     </div>
 </section>
-
-<section class="about">
+<section id="about" class="about">
     <div class="custom-shape-divider-top-1667688268">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -24,9 +21,9 @@
     </div>
     <div class="quote">
         "Nobody in this industry knows what they’re doing, we just have a gut assumption."
-        <span class="quoter">-Cliff Bleszinski</span>
     </div>
-    <hr style="width: 750px; height: 0px;">
+    <span class="quoter">-Cliff Bleszinski</span>
+    <hr style="width: 50vw; height: 0px;">
     <div class="about-question">
         <h2>Why join?</h2>
         <ul>
@@ -45,7 +42,7 @@
     </div>
     <p>We meet on Wednesdays in Mr. Hatchl's room (#1931) in the art hall!</p>
 </section>
-<section class="technology">
+<section id="technology" class="technology">
     <div class="custom-shape-divider-top-1667751780">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -103,11 +100,16 @@
         --white: #f9fcfd;
         --dark: #191a1b;
     }
+
     * {
-        font-weight: 400;
+        font-weight: 500;
         text-align: center;
-        
     }
+
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
 
     .hero {
         display: flex;
@@ -140,7 +142,7 @@
     }
 
     li > span {
-        font-weight: 400;
+        font-weight: 500;
     }
 
     #unity {
@@ -149,11 +151,25 @@
         animation: rotating 50s linear infinite;
         z-index: 1;
         width: 550px;
+        /* height: 550px; */
         opacity: 1;
         -moz-user-select: none;
 -webkit-user-select: none;
 user-select: none;
     }
+
+    .quote {
+        font-size: 3.5rem;
+        font-weight: 800;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .quoter {
+        font-size: 1.5rem;
+    }
+
 
     @keyframes rotating {
     from{
@@ -164,7 +180,7 @@ user-select: none;
     }
 }
 
-    .jump-buttons > button {
+    .jump-buttons > a {
         padding: 5px 20px;
         border-radius: 20px;
         color: #191a1b;
@@ -172,6 +188,15 @@ user-select: none;
         border: 1px solid black;
         transition: .2s;
         font-weight: 600;
+        /* margin-left: 20px; */
+    }
+    
+    .abt {
+        margin-right: 10px;
+    }
+
+    .tec {
+        margin-left: 10px;
     }
 
     li {
@@ -180,7 +205,7 @@ user-select: none;
         margin: 20px auto 0 auto;
     }
 
-    .jump-buttons > button:hover {
+    .jump-buttons > a:hover {
         padding: 5px 20px;
         border-radius: 20px;
         color: #f9fcfd;
@@ -227,22 +252,9 @@ user-select: none;
         font-weight: 400;
         font-size: 1.25rem;
         margin-bottom: 50px;
-        width: 500px;
+        width: 85vw;
         margin: 0 auto;
         padding-top: 50px;
-    }
-
-    .quote {
-        font-size: 3.5rem;
-        font-weight: 800;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        min-width: 665px;
-    }
-
-    .quoter {
-        font-size: 2.25rem;
     }
 
     .technology {
@@ -301,9 +313,7 @@ user-select: none;
         width: 200px;
         margin-bottom: 20px;
     }
-
- 
-
+/* 
     .games {
         display: flex;
         justify-content: center;
@@ -311,10 +321,7 @@ user-select: none;
 
     .games > div {
         display: flex;
-    }
-
-    
-
+    } */
     .custom-shape-divider-top-1667688268 {
     position: absolute;
     top: 0;
@@ -354,4 +361,93 @@ user-select: none;
 .custom-shape-divider-top-1667751780 .shape-fill {
     fill: #F9FCFD;
 }
+
+@media screen and (max-width: 815px) {
+    #unity {
+        display: none;
+    }
+
+    .hero {
+            padding: 100px 0
+             100px 0;
+        }
+}
+
+@media screen and (max-width: 600px) {
+        .about p {
+            margin-top: 0px;
+        }
+
+        #unity {
+            display: none;
+        }
+
+        .quote {
+            font-size: 1.75rem;
+            font-weight: 800;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .quoter {
+            font-size: 1.25rem;
+        }
+
+        .about-question > h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .hero {
+            padding: 100px 0
+             100px 0;
+        }
+
+        li {
+            font-size: 1.25rem;
+            width: 350px
+        }
+
+        .card {
+            max-width: 350px;
+            padding: 20px 10px;
+
+        }
+
+        .technology {
+            height: 1000px;
+        }
+
+        .technology .container {
+            flex-direction: column;
+        }
+
+        .technology img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+    }
+@media screen and (max-width: 1300px) {
+    .card {
+            max-width: 350px;
+            padding: 20px 30px;
+
+        }
+
+        .technology {
+            height: 2000px;
+        }
+
+        .technology .container {
+            flex-direction: column;
+        }
+
+        .technology img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+}
+
 </style>
